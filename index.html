@@ -1,37 +1,46 @@
+<body>
+  <div class="background"></div>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Landing Page</title>
-  </head>
-  <body>
-    <header class="hero">
-      <section id="contact">
-        <h2>Tell me about your automation project</h2>
-        <form id="contact-form">
-          <input type="text" id="name" placeholder="Your name" required />
-          <input type="email" id="email" placeholder="Your email" required />
+  <main class="container">
+    <section class="hero">
+      <h1>Automation Solutions for Your Business</h1>
+      <p>
+        I build custom automations using Python, APIs and n8n to save time,
+        reduce errors and scale operations.
+      </p>
 
-          <select id="projectType" required>
-            <option value="">Select project type</option>
-            <option value="crm">CRM Integration</option>
-            <option value="spreadsheet">Spreadsheet Automation</option>
-            <option value="chatbot">Chatbot</option>
-            <option value="api">API Integration</option>
-          </select>
+      <button id="cta">Start your automation</button>
+    </section>
 
-          <textarea
-            id="description"
-            placeholder="Describe your automation project"
-            required
-          ></textarea>
+    <section class="features">
+      <div class="feature">⚙️ CRM Integrations</div>
+      <div class="feature">🤖 Chatbots</div>
+      <div class="feature">📊 Spreadsheet Automation</div>
+      <div class="feature">🔗 API Connections</div>
+    </section>
 
-          <button type="submit">Send project</button>
-        </form>
-      </section>
-    </header>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
-</html>
+    <section id="contact">
+      <h2>Tell me about your automation project</h2>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your name" required />
+        <input type="email" id="email" placeholder="Your email" required />
+
+        <select id="projectType" required>
+          <option value="">Select project type</option>
+          <option value="crm">CRM Integration</option>
+          <option value="spreadsheet">Spreadsheet Automation</option>
+          <option value="chatbot">Chatbot</option>
+          <option value="api">API Integration</option>
+        </select>
+
+        <textarea
+          id="description"
+          placeholder="Describe your automation project"
+          required
+        ></textarea>
+
+        <button type="submit">Send project</button>
+      </form>
+    </section>
+  </main>
+</body>

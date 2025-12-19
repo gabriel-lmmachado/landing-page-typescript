@@ -1,4 +1,12 @@
 const form = document.getElementById("contact-form") as HTMLFormElement;
+const background = document.querySelector(".background") as HTMLElement;
+
+window.addEventListener("mousemove", (e) => {
+  background.style.transform = `translate(
+    ${e.clientX * 0.01}px,
+    ${e.clientY * 0.01}px
+  )`;
+});
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
