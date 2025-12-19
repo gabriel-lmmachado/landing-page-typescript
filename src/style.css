@@ -1,44 +1,25 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+#contact {
+  padding: 60px 20px;
+  background: #020617;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: #e5e7eb;
-}
-
-.hero {
-  min-height: 100vh;
+form {
+  max-width: 500px;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  text-align: center;
+  gap: 12px;
 }
 
-button {
-  padding: 12px 24px;
+input,
+select,
+textarea {
+  padding: 10px;
+  border-radius: 6px;
   border: none;
-  border-radius: 8px;
-  background: #38bdf8;
-  color: #0f172a;
-  font-size: 16px;
-  cursor: pointer;
 }
 
-button:hover {
-  opacity: 0.9;
+textarea {
+  resize: vertical;
+  min-height: 100px;
 }
-
-button {
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-button:hover {
-  transform: scale(1.05);
-}
-

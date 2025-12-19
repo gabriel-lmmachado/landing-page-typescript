@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,11 +8,30 @@
   </head>
   <body>
     <header class="hero">
-      <h1>Build Faster. Ship Better.</h1>
-      <p>A simple landing page built with TypeScript.</p>
-      <button id="cta">Get Started</button>
-    </header>
+      <section id="contact">
+        <h2>Tell me about your automation project</h2>
+        <form id="contact-form">
+          <input type="text" id="name" placeholder="Your name" required />
+          <input type="email" id="email" placeholder="Your email" required />
 
+          <select id="projectType" required>
+            <option value="">Select project type</option>
+            <option value="crm">CRM Integration</option>
+            <option value="spreadsheet">Spreadsheet Automation</option>
+            <option value="chatbot">Chatbot</option>
+            <option value="api">API Integration</option>
+          </select>
+
+          <textarea
+            id="description"
+            placeholder="Describe your automation project"
+            required
+          ></textarea>
+
+          <button type="submit">Send project</button>
+        </form>
+      </section>
+    </header>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

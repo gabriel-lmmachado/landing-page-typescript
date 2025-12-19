@@ -1,9 +1,21 @@
-const ctaButton = document.getElementById("cta") as HTMLButtonElement;
+const form = document.getElementById("contact-form") as HTMLFormElement;
 
-ctaButton.addEventListener("mouseenter", () => {
-  ctaButton.style.backgroundColor = "#06b6d4"; // muda cor ao passar o mouse
-});
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
 
-ctaButton.addEventListener("mouseleave", () => {
-  ctaButton.style.backgroundColor = "#38bdf8"; // volta à cor original
+  const data = {
+    name: (document.getElementById("name") as HTMLInputElement).value,
+    email: (document.getElementById("email") as HTMLInputElement).value,
+    projectType: (document.getElementById("projectType") as HTMLSelectElement).value,
+    description: (document.getElementById("description") as HTMLTextAreaElement).value,
+  };
+
+  await fetch("https://SEU_WEBHOOK_N8N", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+
+  alert("Your project has been sent successfully!");
+  form.reset();
 });
