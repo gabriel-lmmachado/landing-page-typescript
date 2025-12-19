@@ -1,5 +1,7 @@
 const form = document.getElementById("contact-form") as HTMLFormElement;
 const background = document.querySelector(".background") as HTMLElement;
+import "./style.css";
+
 
 window.addEventListener("mousemove", (e) => {
   background.style.transform = `translate(
