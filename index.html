@@ -10,47 +10,131 @@
 
     <main class="container">
     <section class="hero">
-      <h1>Torne os processos do seu negócio mais fluídos com automações</h1>
+      <h1>Automatize processos. Ganhe tempo. Escale sem dor de cabeça.</h1>
       <p>
-        Construção de automações personalizadas para integrar suas ferramentas e
-        otimizar seus fluxos de trabalho.
+        Crio automações sob medida usando Python, APIs e n8n para eliminar tarefas repetitivas e conectar as ferramentas do seu negócio.
       </p>
-
-      <button id="cta">Me conte sobre sua ideia!</button>
+      <button id="cta">Quero automatizar algo</button>
     </section>
-
     <section class="features">
-      <div class="feature"> Integrações com CRM</div>
-      <div class="feature"> Chatbots</div>
-      <div class="feature"> Automação de Planilhas</div>
-      <div class="feature"> Conexões API</div>
+      <div class="feature"> 
+        <i class="database-zap"></i>
+        Integrações com CRM</div>
+      <div class="feature"> 
+        <i class="icon-Chatbot"></i>
+        Chatbots</div>
+      <div class="feature"> 
+        <i class="icon-Spreadsheet"></i>
+        Automação de Planilhas</div>
+      <div class="feature"> 
+        <i class="icon-API"></i>
+        Conexões API</div>
     </section>
-
-    <section id="contact">
-      <h2>Me fale sobre o seu negócio</h2>
-      <form id="contact-form">
-        <input type="text" id="name" placeholder="Seu nome" required />
-        <input type="email" id="email" placeholder="Seu email" required />
-        <input type="phone" id="phone" placeholder="Seu telefone" required />
-
-        <select id="projectType" required>
-          <option value="">Selecione o tipo de projeto</option>
-          <option value="crm">Integração com CRM</option>
-          <option value="spreadsheet">Automação de Planilhas</option>
-          <option value="chatbot">Chatbot</option>
-          <option value="api">Integração API</option>
-        </select>
-
-        <textarea
+    <section class="problem">
+      <h2>Por que automatizar processos?</h2>
+      <p>Tarefas manuais custam tempo, geram erros e travam o crescimento. Se algo é repetitivo, provavelmente deveria ser automatizado.</p>
+      <ul class="problem-list">
+        <li>
+          <i data-lucide="database-zap"></i>
+          <span>Horas perdidas com tarefas operacionais</span>
+        </li>
+        <li>
+          <i data-lucide="alert-triangle"></i>
+          <span>Erros humanos em planilhas e cadastros</span>
+        </li>
+        <li>
+          <i data-lucide="unlink"></i>
+          <span>Sistemas que não se comunicam entre si</span>
+        </li>
+        <li>
+          <i data-lucide="message-circle-off"></i>
+          <span>Mensagens e leads sem resposta</span>
+        </li>
+        <li>
+          <i data-lucide="alert-triangle"></i>
+          <span>Erros humanos em planilhas e cadastros</span>
+        </li>
+        <li>
+          <i data-lucide="unlink"></i>
+          <span>Sistemas que não se comunicam entre si</span>
+        </li>
+        <li>
+          <i data-lucide="message-circle-off"></i>
+          <span>Mensagens e leads sem resposta</span>
+        </li>
+      </ul>
+    </section>
+    <section class="examples">
+      <h2>Exemplos de automações na prática</h2>
+      <div class="examples-grid">
+        <div class="example">
+          Formulário preenchido (LP) → lead salvo + email automático
+        </div>
+        <div class="example">
+          Chatbot padrão respondendo dúvidas comuns ou Agente IA
+        </div>
+        <div class="example">
+          Planilhas atualizadas automaticamente
+        </div>
+        <div class="example">
+          APIs conectadas sincronizando dados em tempo real
+        </div>
+      </div>
+    </section>
+    <section class="examples">
+      <h2>Como eu construo automações</h2>
+      <div class="examples-grid">
+        <p>Cada projeto é pensado para se encaixar no seu fluxo atual,
+          sem complicar o que já funciona.
+        </p>
+      </div>
+      <section class="steps">
+        <div class="step">
+          <h3>1. Entendimento</h3>
+          <p>Mapeio seu processo atual e identifico pontos de automação.</p>
+        </div>
+        <div class="step">
+          <h3>2. Planejamento</h3>
+          <p>Defino as ferramentas e tecnologias ideais para sua solução.</p>
+        </div>
+        <div class="step">
+          <h3>3. Desenvolvimento</h3>
+          <p>Construo a automação, integro sistemas e executo o processo de testes.</p>
+        </div>
+        <div class="step">
+          <h3>4. Entrega & Suporte</h3>
+          <p>Implantação da solução, treinamento da equipe (se necessário) e suporte contínuo (sob avaliação).</p>
+        </div>
+      </section>
+      <section class="cta-final">
+        <h2>Se você consegue explicar, dá pra automatizar.</h2>
+        <p>
+          Descreva sua ideia abaixo. Eu cuido da parte técnica.
+        </p>
+      </section>
+      <section id="contact">
+        <h2>Me conte sobre o que você quer automatizar</h2>
+        <form id="contact-form">
+          <input type="text" id="name" placeholder="Seu nome" required />
+          <input type="email" id="email" placeholder="Seu email" required />
+          <input type="phone" id="phone" placeholder="Seu telefone" required />
+          <select id="projectType" required>
+            <option value="">Selecione o tipo de projeto</option>
+            <option value="crm">Integração com CRM</option>
+            <option value="spreadsheet">Automação de Planilhas</option>
+            <option value="chatbot">Chatbot</option>
+            <option value="api">Integração API</option>
+          </select>
+          <textarea
           id="description"
           placeholder="Descreva seu projeto de automação"
           required
-        ></textarea>
-
-        <button type="submit">Enviar projeto</button>
-      </form>
-    </section>
-  </main>
+          ></textarea>
+          <button type="submit">Enviar projeto</button>
+        </form>
+      </section>
+    </main>
+    <footer class="site-footer">Criado e desenvolvido por: Machado</footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

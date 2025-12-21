@@ -1,4 +1,6 @@
 import "./style.css";
+import { createIcons, icons } from "lucide";
+import "./style.css";
 
 const form = document.getElementById("contact-form") as HTMLFormElement;
 const background = document.querySelector(".background") as HTMLElement;
@@ -41,16 +43,17 @@ form.addEventListener("submit", async (event) => {
   };
 
   try {
-    await fetch("https://SEU_WEBHOOK_N8N", {
+    await fetch("https://n8n-n8n-start.7vwfqo.easypanel.host/webhook-test/automation_new_project", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
 
-    alert("Your project has been sent successfully!");
+    alert("Seu projeto foi enviado com sucesso!");
     form.reset();
   } catch (error) {
     console.error("Erro ao enviar formulário:", error);
     alert("Erro ao enviar. Tente novamente.");
   }
 });
+createIcons({ icons });
