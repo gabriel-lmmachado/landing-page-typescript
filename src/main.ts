@@ -43,7 +43,7 @@ form.addEventListener("submit", async (event) => {
   };
 
   try {
-    await fetch("https://n8n-n8n-start.7vwfqo.easypanel.host/webhook-test/automation_new_project", {
+    await fetch("https://n8n-n8n-start.7vwfqo.easypanel.host/webhook/automation_new_project", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
