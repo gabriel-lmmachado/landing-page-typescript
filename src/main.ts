@@ -1,6 +1,5 @@
 import "./style.css";
 import { createIcons, icons } from "lucide";
-import "./style.css";
 
 const form = document.getElementById("contact-form") as HTMLFormElement;
 const background = document.querySelector(".background") as HTMLElement;
@@ -35,19 +34,29 @@ ctaButton.addEventListener("click", () => {
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  // Seleciona os inputs pelo name
-  const nomeInput = form.querySelector<HTMLInputElement>('input[name="nome"]');
+  const nameInput = form.querySelector<HTMLInputElement>('input[name="name"]');
   const emailInput = form.querySelector<HTMLInputElement>('input[name="email"]');
+  const phoneInput = form.querySelector<HTMLInputElement>('input[name="phone"]');
+  const projectTypeInput = form.querySelector<HTMLSelectElement>('select[name="projectType"]');
+  const descriptionInput = form.querySelector<HTMLTextAreaElement>("#description");
 
-  if (!nomeInput || !emailInput) {
+  if (
+    !nameInput ||
+    !emailInput ||
+    !phoneInput ||
+    !projectTypeInput ||
+    !descriptionInput
+  ) {
     alert("Campos do formulário não encontrados!");
     return;
   }
 
   const data = {
-    nome: nomeInput.value,
+    name: nameInput.value,
     email: emailInput.value,
-    // outros campos...
+    phone: phoneInput.value,
+    projectType: projectTypeInput.value,
+    description: descriptionInput.value,
   };
 
   try {
