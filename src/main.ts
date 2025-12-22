@@ -42,7 +42,7 @@ form.addEventListener("submit", async (e) => {
   };
 
   try {
-    const response = await fetch("/.netlify/functions/sendProject", {
+    const response = await fetch("/functions/sendProject", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
