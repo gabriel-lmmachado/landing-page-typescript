@@ -35,14 +35,23 @@ ctaButton.addEventListener("click", () => {
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
+  // Seleciona os inputs pelo name
+  const nomeInput = form.querySelector<HTMLInputElement>('input[name="nome"]');
+  const emailInput = form.querySelector<HTMLInputElement>('input[name="email"]');
+
+  if (!nomeInput || !emailInput) {
+    alert("Campos do formulário não encontrados!");
+    return;
+  }
+
   const data = {
-    nome: form.nome.value,
-    email: form.email.value,
-    // outros campos
+    nome: nomeInput.value,
+    email: emailInput.value,
+    // outros campos...
   };
 
   try {
-    const response = await fetch("/functions/sendProject", {
+    const response = await fetch("/.netlify/functions/sendProject", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -62,4 +71,5 @@ form.addEventListener("submit", async (e) => {
     alert("Erro ao enviar formulário. Tente novamente.");
   }
 });
+
 createIcons({ icons });
