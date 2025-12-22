@@ -32,28 +32,34 @@ ctaButton.addEventListener("click", () => {
 });
 
 // Envio do formulário
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
   const data = {
-    name: (document.getElementById("name") as HTMLInputElement).value,
-    email: (document.getElementById("email") as HTMLInputElement).value,
-    projectType: (document.getElementById("projectType") as HTMLSelectElement).value,
-    description: (document.getElementById("description") as HTMLTextAreaElement).value,
+    nome: form.nome.value,
+    email: form.email.value,
+    // outros campos
   };
 
   try {
-    await fetch("https://n8n-n8n-start.7vwfqo.easypanel.host/webhook/automation_new_project", {
+    const response = await fetch("/.netlify/functions/sendProject", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
 
-    alert("Seu projeto foi enviado com sucesso!");
-    form.reset();
+    const result = await response.json();
+
+    if (response.ok) {
+      alert(result.message);
+      form.reset();
+    } else {
+      console.error(result);
+      alert("Erro ao enviar projeto. Veja o console para detalhes.");
+    }
   } catch (error) {
     console.error("Erro ao enviar formulário:", error);
-    alert("Erro ao enviar. Tente novamente.");
+    alert("Erro ao enviar formulário. Tente novamente.");
   }
 });
 createIcons({ icons });
